@@ -57,7 +57,7 @@ Our code is divided into four folders:
 least-squares, as well as the proximal gradient method, the regularized matching pursuit, and the ultimate method
 applied on the LASSO.
 - **generate_data**: this file contains files for generating random data, in particular synthetic gaussian random
-variables, sparse optimum, loader of real datasets (the Leukemia dataset, breast-cancer), and random features.
+variables, sparse optimum, loader of real datasets (the Leukemia dataset, breast-cancer, diabetes), and random features.
 - **utils**: this folder contains the code for generating epsilon-curves and computing approximates for smoothness,
 strong convexity and Lojasiewicz parameters.
 - **figures**: this folder contains all the codes for plotting the figures of the paper.

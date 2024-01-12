@@ -29,22 +29,3 @@ def fista(X, y, w_0, lam, gamma, num_iters, mu=0.):
         xs[i] = ws[i] + ((t0 - 1.) / t) * (ws[i] - ws[i-1])
     return ws
 
-
-if __name__=='__main__':
-    d = 20
-    s = 3
-    n = 5
-    w_ = np.random.rand(d)
-    I = np.random.randint(0, d, d-s)
-    w_[I] = 0
-    w_0 = np.zeros(d)
-
-    y, X, E = generate_uniform_gaussian_data(d=d, n=n, w_=w_)
-    L = max(np.linalg.eigvalsh(X.T @ X)) / n
-    gamma = 1 / L  # gamma : 1/L
-
-    lam = 0.3
-    num_iters = 10
-    ws = fista(X, y, w_0, lam, gamma, num_iters)
-    print(ws[0])
-    print(ws[-1])

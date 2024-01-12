@@ -78,24 +78,3 @@ if __name__=='__main__':
     plt.hist(Ls, bins=10)
     plt.show()
 
-    """print('Uniform Gaussian')
-    
-    assert y_ug.shape[0] == n
-    assert X_ug.shape[1] == d
-    print('maximal eigenvalue', max(np.linalg.eigvalsh(X_ug.T @ X_ug)))
-    print('minimal eigenvalue', min(np.linalg.eigvalsh(X_ug.T @ X_ug)))
-    print('eigenvalues', np.linalg.eigvalsh(X_ug.T @ X_ug))
-
-    print(X_ug.shape)
-    U = X_ug * X_ug
-    Ls = np.diag(np.max(U, axis=0))
-    print(Ls.shape)
-    print(Ls)
-
-    print('Non uniform Gaussian')
-    y_nug, X_nug, E_nug = generate_non_uniform_gaussian_data(d=d, n=n, w_=w_, sigma=1)
-    assert y_nug.shape[0] == n
-    assert X_nug.shape[1] == d
-    print('maximal eigenvalue', max(np.linalg.eigvalsh(X_nug.T @ X_nug)))
-    print('minimal eigenvalue', min(np.linalg.eigvalsh(X_nug.T @ X_nug)))
-    print('eigenvalues', np.linalg.eigvalsh(X_nug.T @ X_nug))"""

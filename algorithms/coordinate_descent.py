@@ -78,23 +78,3 @@ def gsq_cd_lasso(X, y, w_0, lam=1, num_iters=10, lipschitz=True, L=0, Ls=0):
     return ws
 
 
-if __name__ == '__main__':
-    d = 100
-    n = 20
-    s = 4
-    sigma = 0.
-    num_iters = 15
-    print('optimal lambda in statistics', np.sqrt(np.log(d) / n))
-    lam = 0.1
-
-    w_0 = np.zeros(d)
-    w_star = generate_sparse_optimum(d=d, s=s)
-    print(w_star)
-
-
-    X = np.random.multivariate_normal(np.zeros(d), np.eye(d), n)
-    y = X @ w_star + np.random.normal(0, sigma, n)
-
-    ws = gsq_cd_lasso(X=X, y=y, w_0=w_0, lam=lam, num_iters=num_iters)
-    print(ws[-2:])
-
